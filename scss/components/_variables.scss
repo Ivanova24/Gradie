@@ -1,0 +1,48 @@
+// color
+$color-body: #000; 
+$color-white: #fff; 
+$color-cta: #013243; 
+$color-text-img: #86BFD3; 
+$color-text-input: #8D8D8D; 
+$color-border-input: #BCBCBC; 
+
+// Font
+$font-body: "Roboto", sans-serif;
+$font-text: "Inter", sans-serif;
+$font-form-cta: "DM Sans", sans-serif;
+
+// Font size
+$font-size-title: 2.25rem; 
+$font-size-body: 1.13rem; 
+
+// wrapper
+$wrapper-bg: clamp(16.3rem, 14.4vw, 28.9rem);
+
+// breakPoints
+$breakpoints: (
+  small: 499px,
+  medium: 699px,
+  large: 999px,
+  xlarge: 1399px,
+);
+
+@mixin breakpoint($size) {
+  $breakpoint-value: map-get($breakpoints, $size);
+
+  @media screen and (min-width: $breakpoint-value) {
+    @content;
+  }
+}
+
+// button
+@mixin button-bg($bg) {
+    background-color: $bg;
+    border: transparent;
+    
+    &:hover {
+      border: medium solid $color-cta;
+      background-color: $color-white;
+      transition: all 0.5s ease;
+      color: $color-cta;
+    }
+}
