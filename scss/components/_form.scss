@@ -1,1 +1,103 @@
-@use 'variables' as v; 
+@use 'variables' as v;
+
+.gradient {
+  .signUp {
+    &-logo {
+      background-color: v.$color-cta;
+      padding: 4.5rem 5rem 0 5rem;
+      text-align: center;
+      display: grid;
+      row-gap: 8px;
+
+      h1 {
+        font-size: v.$font-size-title;
+        color: v.$color-white;
+      }
+
+      p {
+        color: v.$color-text-img;
+        margin-bottom: 90px;
+      }
+
+      img {
+        margin: 0 auto;
+      }
+    }
+
+    &-form {
+      border: 1px solid v.$color-border-input;
+      padding: 4.5rem 5rem 4.5rem 5rem;
+      background-color: v.$color-white;
+      border-radius: 0px 0px 10px 10px;
+
+      .form-content {
+        display: grid;
+        row-gap: 24px;
+
+        h2 {
+          font-size: v.$font-size-title;
+        }
+
+        &__data {
+          display: flex;
+          flex-direction: column;
+          row-gap: 8px;
+
+          label {
+            font-family: v.$font-form-cta;
+            font-weight: 700;
+          }
+
+          input {
+            border: thin solid v.$color-border-input;
+            padding: 19px 17px;
+
+            &::placeholder {
+              font-family: v.$font-form-cta;
+              font-size: v.$font-size-body;
+              color: v.$color-text-input;
+            }
+          }
+
+          .btn-cta {
+            @include v.button-bg(v.$color-cta);
+          }
+        }
+
+        &__data--terms {
+          align-items: baseline;
+          flex-direction: row;
+          column-gap: 1.1rem;
+
+          p {
+            font-family: v.$font-text;
+
+            a {
+              color: v.$color-cta;
+              font-weight: 700;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @include v.breakpoint(medium) {
+    background-image: url("/Assets/Background.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    .signUp {
+      padding: 130px v.$wrapper 164px;
+      z-index: 1;
+
+      @include v.breakpoint(large) {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding-top: 174px;
+        padding-bottom: 174px;
+      }
+    }
+  }
+}

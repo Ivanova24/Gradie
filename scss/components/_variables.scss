@@ -1,10 +1,10 @@
 // color
-$color-body: #000; 
-$color-white: #fff; 
-$color-cta: #013243; 
-$color-text-img: #86BFD3; 
-$color-text-input: #8D8D8D; 
-$color-border-input: #BCBCBC; 
+$color-body: #000;
+$color-white: #fff;
+$color-cta: #013243;
+$color-text-img: #86bfd3;
+$color-text-input: #8d8d8d;
+$color-border-input: #bcbcbc;
 
 // Font
 $font-body: "Roboto", sans-serif;
@@ -12,11 +12,11 @@ $font-text: "Inter", sans-serif;
 $font-form-cta: "DM Sans", sans-serif;
 
 // Font size
-$font-size-title: 2.25rem; 
-$font-size-body: 1.13rem; 
+$font-size-title: 3.6rem;
+$font-size-body: 1.8rem;
 
 // wrapper
-$wrapper-bg: clamp(16.3rem, 14.4vw, 28.9rem);
+$wrapper: clamp(16.3rem, 14.4vw, 28.9rem);
 
 // breakPoints
 $breakpoints: (
@@ -36,13 +36,15 @@ $breakpoints: (
 
 // button
 @mixin button-bg($bg) {
-    background-color: $bg;
-    border: transparent;
-    
-    &:hover {
-      border: medium solid $color-cta;
-      background-color: $color-white;
-      transition: all 0.5s ease;
-      color: $color-cta;
-    }
+  background-color: $bg;
+
+  &:hover {
+    border: thin solid $color-cta;
+    background-image: url("/Assets/Background.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    transition: all 0.5s ease;
+    color: $color-cta;
+  }
 }
