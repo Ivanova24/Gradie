@@ -83,10 +83,7 @@
   }
 
   @include v.breakpoint(medium) {
-    background-image: url("/Assets/Background.png");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+    background-image: linear-gradient(302deg, #fbda61a3 12%, #ee7da2 77%);
 
     .signUp {
       padding: 130px v.$wrapper 164px;
